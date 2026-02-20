@@ -1,78 +1,107 @@
-# Fourier Analysis and Frequency Domain Processing
+# Fourier Implementations (FFT Basics)
 
-This module consolidates comprehensive lecture notes covering Fourier theory and its applications in image processing.
+This folder contains practical implementations of Fourier-domain operations using the Fast Fourier Transform (FFT).
 
-It provides foundational understanding of how images can be analyzed, filtered, and interpreted in the frequency domain.
+These notebooks demonstrate how common signal-processing tasks can be performed efficiently in the frequency domain.
 
 
 
 ## Contents
 
-- fourier-notes-1.pdf  
-- fourier-notes-2.pdf  
-- fourier-notes-3.pdf  
+### fft-convolution.ipynb
+FFT Basics: Convolution
 
-These documents collectively cover theoretical foundations and practical applications of Fourier analysis in image processing.
+Demonstrates:
 
+- Direct convolution (`signal.convolve`)
+- FFT-based convolution (`signal.fftconvolve`)
+- Manual FFT pipeline:
+  - FFT of signal
+  - FFT of kernel
+  - Multiplication in frequency domain
+  - Inverse FFT
+- Error comparison between spatial and frequency approaches
+- Visualization of real and imaginary components
 
+Key Concept:
 
-## Topics Covered
-
-### 1D and 2D Fourier Transform
-- Continuous vs Discrete Fourier Transform (DFT)
-- Fast Fourier Transform (FFT)
-- Complex exponential representation
-- Sinusoidal decomposition
-
-### Frequency Domain Representation
-- Magnitude spectrum
-- Phase spectrum
-- Log scaling of spectra
-- Frequency shifting (centering)
-
-### Convolution Theorem
-Convolution in the spatial domain is equivalent to multiplication in the frequency domain.
-
-This enables efficient image filtering using FFT-based methods.
-
-### Frequency-Domain Filtering
-- Low-pass filtering (smoothing)
-- High-pass filtering (edge enhancement)
-- Band-pass filtering
-- Ideal vs Gaussian filters
-- Filter design considerations
-
-### Spectral Interpretation
-- Low frequencies → illumination / smooth variations
-- High frequencies → edges / fine details
-- Importance of phase information
-- Effects of removing magnitude vs phase
-
-### Practical Considerations
-- Zero-padding
-- Periodicity assumptions
-- Aliasing
-- Sampling effects
+Convolution in spatial domain = multiplication in frequency domain.
 
 
 
-## Why This Module Matters
+### fft-derivative.ipynb
+FFT Basics: Derivative
 
-Fourier analysis is foundational for:
+Demonstrates:
 
-- Image filtering and restoration
-- Noise removal
-- Edge detection
-- Texture analysis
-- Signal processing
-- Compression (e.g., DCT in JPEG)
-- Computer vision pipelines
-- Deep learning feature understanding
+- Computing derivatives using the Fourier property:
 
-Understanding frequency-domain processing provides insight into how spatial-domain operations behave mathematically.
+  dⁿf/dxⁿ  ↔  (jω)ⁿ F(ω)
+
+- First and second derivatives via FFT
+- Verification against analytic derivatives
+- Handling periodic grids
+- Use of `fftshift` and frequency indexing
+
+Key Concept:
+
+Differentiation becomes multiplication in the frequency domain.
 
 
-- These PDFs serve as theory reference material.
-- They pair naturally with earlier modules on spatial filtering and edge detection.
-- Frequency-domain concepts connect directly to convolution, smoothing, sharpening, and morphology operations in previous folders.
+
+### fft-gaussian.ipynb
+FFT Basics: Gaussian
+
+Demonstrates:
+
+- Constructing a Gaussian in spatial domain
+- Computing its Fourier Transform
+- Inspecting magnitude and phase spectra
+- Observing Gaussian self-similarity in frequency domain
+
+Key Concept:
+
+A Gaussian transforms to a Gaussian in the frequency domain.
+
+
+
+### fft-upsampling.ipynb
+FFT Basics: Upsampling
+
+Demonstrates:
+
+- Zero-padding in the frequency domain
+- Spectrum shifting with `fftshift`
+- Inverse FFT to obtain interpolated signal
+- Visualization of upsampled signal vs original
+
+Key Concept:
+
+Zero-padding the Fourier spectrum increases spatial resolution (interpolation).
+
+
+
+## Requirements
+
+Install dependencies:
+
+pip install numpy matplotlib scipy
+
+
+
+## How to Run
+
+jupyter notebook
+
+Open each notebook and run top-to-bottom.
+
+
+
+## Notes
+
+- Signals are treated as periodic due to FFT assumptions.
+- Small imaginary components after inverse FFT are normal numerical artifacts.
+- Zero-padding length and alignment matter for accurate reconstruction.
+- These notebooks pair directly with the Fourier theory PDFs in the parent folder.
+
 
