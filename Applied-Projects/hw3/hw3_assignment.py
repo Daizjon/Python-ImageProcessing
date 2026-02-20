@@ -6,7 +6,7 @@
 # Implemented a disk_kernel() function based on the box_kernel() and circular_mask() functions. Modified show_imghist() to allow control over (vmin,vmax) range. Applied box_kernel() and disk_kernel() to cars.jpg. 
 # 
 # 
-# SUMMARY: The box kernel blurs more.Tthey look similar but the box is harder to distinguish. for the Iblur- I the box kernel is easier to see than the disc kernel. This makes sense as you would expect the difference to give an oppisite result.
+# SUMMARY: The box kernel blurs more. They look similar but the box is harder to distinguish. for the Iblur- I the box kernel is easier to see than the disc kernel. This makes sense as you would expect the difference to give an opposite result.
 # 
 
 # In[1]:
