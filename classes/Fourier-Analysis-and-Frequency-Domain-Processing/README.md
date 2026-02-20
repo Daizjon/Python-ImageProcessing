@@ -1,78 +1,78 @@
 # Fourier Analysis and Frequency Domain Processing
 
-This module consolidates comprehensive lecture notes covering Fourier theory and its applications in image processing.
+This module consolidates Fourier theory and practical frequency-domain implementations for signal and image processing.
 
-It provides foundational understanding of how images can be analyzed, filtered, and interpreted in the frequency domain.
+It is divided into two structured components:
 
+- **Theory** → Conceptual foundations and mathematical background
+- **Implementations** → Applied FFT-based demonstrations and experiments
 
-
-## Contents
-
-- fourier-notes-1.pdf  
-- fourier-notes-2.pdf  
-- fourier-notes-3.pdf  
-
-These documents collectively cover theoretical foundations and practical applications of Fourier analysis in image processing.
+Together, they provide a complete understanding of frequency-domain processing.
 
 
 
-## Topics Covered
+## Folder Structure
 
-### 1D and 2D Fourier Transform
-- Continuous vs Discrete Fourier Transform (DFT)
+### Theory/
+
+Contains lecture notes covering:
+
+- Continuous and Discrete Fourier Transform (DFT)
 - Fast Fourier Transform (FFT)
-- Complex exponential representation
-- Sinusoidal decomposition
+- 1D and 2D frequency representation
+- Magnitude and phase spectra
+- Convolution theorem
+- Frequency-domain filtering
+- Sampling and aliasing
+- Spectral interpretation of images
 
-### Frequency Domain Representation
-- Magnitude spectrum
-- Phase spectrum
-- Log scaling of spectra
-- Frequency shifting (centering)
-
-### Convolution Theorem
-Convolution in the spatial domain is equivalent to multiplication in the frequency domain.
-
-This enables efficient image filtering using FFT-based methods.
-
-### Frequency-Domain Filtering
-- Low-pass filtering (smoothing)
-- High-pass filtering (edge enhancement)
-- Band-pass filtering
-- Ideal vs Gaussian filters
-- Filter design considerations
-
-### Spectral Interpretation
-- Low frequencies → illumination / smooth variations
-- High frequencies → edges / fine details
-- Importance of phase information
-- Effects of removing magnitude vs phase
-
-### Practical Considerations
-- Zero-padding
-- Periodicity assumptions
-- Aliasing
-- Sampling effects
+The theory section builds the mathematical intuition behind frequency-domain operations.
 
 
 
-## Why This Module Matters
+### Implementations/
 
-Fourier analysis is foundational for:
+Contains Jupyter notebooks demonstrating:
 
-- Image filtering and restoration
-- Noise removal
+- Convolution using FFT
+- Derivatives via frequency-domain multiplication
+- Gaussian behavior in spatial vs frequency domain
+- Zero-padding and upsampling in Fourier space
+- Real vs imaginary components of spectra
+- Error comparison between spatial and FFT-based methods
+
+These notebooks translate the theoretical concepts into working code and visual validation.
+
+
+
+## Learning Objectives
+
+By completing this module, you should understand:
+
+- Why convolution becomes multiplication in the frequency domain
+- How differentiation corresponds to multiplication by jω
+- How zero-padding affects spatial resolution
+- Why Gaussian functions preserve shape under Fourier transform
+- The relationship between magnitude and phase
+- Practical considerations when using FFT (periodicity, padding, numerical artifacts)
+
+
+
+## Requirements (For Implementations)
+
+pip install numpy matplotlib scipy
+
+
+
+## Notes
+
+- Theory provides the mathematical framework.
+- Implementations validate those principles computationally.
+- Together, they form a complete frequency-domain toolkit.
+
+This module integrates naturally with:
+- Spatial filtering
 - Edge detection
-- Texture analysis
-- Signal processing
-- Compression (e.g., DCT in JPEG)
-- Computer vision pipelines
-- Deep learning feature understanding
-
-Understanding frequency-domain processing provides insight into how spatial-domain operations behave mathematically.
-
-
-- These PDFs serve as theory reference material.
-- They pair naturally with earlier modules on spatial filtering and edge detection.
-- Frequency-domain concepts connect directly to convolution, smoothing, sharpening, and morphology operations in previous folders.
+- Morphology
+- Feature extraction
 
