@@ -1,13 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # HW3 Image Filtering: Disk Kernel
+# # Image Filtering: Disk Kernel
+# Dai'zjon Carney
+# Implemented a disk_kernel() function based on the box_kernel() and circular_mask() functions. Modified show_imghist() to allow control over (vmin,vmax) range. Applied box_kernel() and disk_kernel() to cars.jpg. 
 # 
-# ECE472: Implement a disk_kernel() function based on the box_kernel() and circular_mask() functions from class. Modify show_imghist() to allow control over (vmin,vmax) range. Apply box_kernel() and disk_kernel() to cars.jpg. 
-# 
-# Add _brief_ Markdown summary of pertinent oberservations (which kernel blurs more, what looks the same/different in the two, etc).
-# 
-# ECE572: Same as ECE472.
 # 
 # SUMMARY: The box kernel blurs more.Tthey look similar but the box is harder to distinguish. for the Iblur- I the box kernel is easier to see than the disc kernel. This makes sense as you would expect the difference to give an oppisite result.
 # 
