@@ -3,7 +3,7 @@
 
 # # Histogram Equalization
 # Dai'zjon Carney
-# Implement histogram equalization and apply to Cheetah.png. Update show_imghist() to take two images and produce a 2x2 grid of those images and their histograms. The first image should be the original image. The second image should be the histogram equalized image.
+# Implemented histogram equalization and applied to Cheetah.png. Updated show_imghist() to take two images and produce a 2x2 grid of those images and their histograms. The first image is the original image. The second image is the histogram equalized image.
  
 
 # In[1]:
