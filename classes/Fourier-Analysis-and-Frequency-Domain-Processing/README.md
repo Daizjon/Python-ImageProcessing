@@ -76,6 +76,3 @@ Understanding frequency-domain processing provides insight into how spatial-doma
 - They pair naturally with earlier modules on spatial filtering and edge detection.
 - Frequency-domain concepts connect directly to convolution, smoothing, sharpening, and morphology operations in previous folders.
 
----
-
-Author: Dai’zjon Carney
