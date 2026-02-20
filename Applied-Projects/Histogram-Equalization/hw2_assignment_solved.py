@@ -2,14 +2,9 @@
 # coding: utf-8
 
 # # Histogram Equalization
-# 
-# Implement histogram equalization and apply to Cheetah.png. Update show_imghist() to take two images and produce a 2x2 grid of those images and their histograms. The first image should be the original image. The second image should be the histogram equalized image. Update the metadata to include YOUR NAME. Submit a clean ipynb file that can run and produce the requested output.
-# 
-# ECE472: Use skimage.exposure.equalize_hist() to perform the enhancement.
-# 
-# ECE572: Implement equalize_hist(image, nbins=256). Use skimage.exposure.histogram() to produce a histogram for the image along with associated bin centers. Use numpy.cumsum() to calculate the cumulative distribution for the histogram. Remember to rescale so CDF[-1] = 1. Use numpy.interp() to interpolate image intensity values given image.flat, the bin centers and the cumulative distribution function. Reshape the result to the shape of the input image.
-# 
-# BONUS: For bragging rights, implement equalize_hist(image, nbins=256, use_sqrt=False) where the use_sqrt argument controls whether to use histogram values $H_i$ or $\sqrt{H_i}$ when forming the cumulative distribution. Show the result of use_sqrt=False and use_sqrt=True.
+# Dai'zjon Carney
+# Implement histogram equalization and apply to Cheetah.png. Update show_imghist() to take two images and produce a 2x2 grid of those images and their histograms. The first image should be the original image. The second image should be the histogram equalized image.
+ 
 
 # In[1]:
 
